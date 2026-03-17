@@ -1,0 +1,342 @@
+/* === Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Raleway:wght@400;700&display=swap');
+
+/* === CSS Variables === */
+:root {
+  --primary-color: #e0e1dd;
+  --secondary-color: #778da9;
+  --accent1-color: #415a77;
+  --accent2-color: #1B263B;
+
+  --heading-font: "Raleway", sans-serif;
+  --paragraph-font: "Roboto Condensed", Helvetica, sans-serif;
+
+  --headline-color-on-white: #0D1B2A;
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: #396E94;
+  --paragraph-color-on-color: #0D1B2A;
+  --paragraph-background-color: #0D1B2A;
+  --nav-link-color: #e0e1dd;
+  --nav-background-color: #415a77;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #396E94;
+}
+
+/* === Reset === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Body === */
+body {
+  background-color: #fcfbfb;
+  font-family: var(--paragraph-font);
+  font-size: 22px;
+  color: var(--paragraph-color-on-white);
+  margin: 0;
+  padding: 0;
+}
+
+/* === Page Container === */
+#content {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* === Headings === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+
+h2 {
+  margin: 0;
+}
+
+/* === Paragraphs === */
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  padding: 0.5em 1em;
+}
+
+/* ================================
+   HEADER
+================================ */
+header {
+  background-color: var(--accent1-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+}
+
+/* === Logo === */
+#logo_link {
+  padding-top: 5px;
+}
+
+.logo {
+  width: 50px;
+  display: block;
+}
+
+/* === Nav === */
+nav {
+  display: flex;
+  gap: 2px;
+}
+
+nav a {
+  text-align: center;
+  text-decoration: none;
+  padding: 35px;
+  color: var(--nav-link-color);
+  font-family: var(--paragraph-font);
+  font-weight: 400;
+  font-size: 0.85rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:link,
+nav a:visited {
+  color: var(--nav-link-color);
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+/* ================================
+   HERO
+================================ */
+#hero {
+  width: 100%;
+}
+
+#hero-box {
+  width: 100%;
+  overflow: hidden;
+}
+
+#hero-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+#hero-msg {
+  text-align: center;
+  padding: 20px 20px 10px;
+  background-color: #fcfbfb;
+}
+
+#hero-msg h1,
+.home-title {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 4px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#hero-msg h2 {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#hero-msg h4 {
+  color: var(--paragraph-color-on-white);
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+
+/* === Button Box === */
+.button-box {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* === Book & Join Buttons === */
+.book, .join {
+  background-color: var(--secondary-color);
+  color: var(--headline-color-on-color);
+  text-decoration: none;
+  font-family: var(--paragraph-font);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  margin-top: 50px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.book:hover, .join:hover {
+  background-color: var(--accent1-color);
+  color: #fff;
+}
+
+/* ================================
+   MAIN / CARDS
+================================ */
+.home-grid {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+main section {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0 20px;
+}
+
+/* Card images */
+.card-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+  border: 10px solid #778da9;
+}
+
+/* Box sizing for images */
+main section img {
+  box-sizing: border-box;
+}
+
+/* Icons */
+.icon {
+  width: 50px;
+  display: block;
+  margin: 8px auto 4px;
+  padding-top: 10px;
+}
+
+.rivers-card, .camping-card, .rapids-card {
+  margin: 200px 0;
+}
+
+.rivers-card h2,
+.camping-card h2,
+.rapids-card h2 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+/* ================================
+   BACKGROUND
+================================ */
+#background {
+  height: 725px;
+  background-color: #1B263B;
+  display: block;
+  width: 100%;
+}
+
+/* ================================
+   MOUNTAINS IMAGE
+================================ */
+.mountains {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ================================
+   MSG SECTION
+================================ */
+.msg {
+  background-color: var(--accent1-color);
+  text-align: center;
+  padding: 35px;
+  line-height: 1.5em;
+}
+
+.msg h2 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-color);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.msg p {
+  color: var(--primary-color);
+  font-size: 0.8em;
+  max-width: 700px;
+  margin: 0 auto 18px;
+  padding-bottom: 15px;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  background-color: var(--paragraph-background-color);
+  color: var(--headline-color-on-color);
+  text-align: center;
+  padding: 25px 50px;
+  margin-top: 200px;
+}
+
+footer p {
+  font-size: 1em;
+  color: var(--primary-color);
+  margin-bottom: 6px;
+}
+
+footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--headline-color-on-color);
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+/* === Social Icons === */
+.social {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+  padding-top: 15px;
+  transition: opacity 0.2s;
+}
+
+.social a:hover img {
+  opacity: 0.7;
+}
